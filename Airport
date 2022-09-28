@@ -1,0 +1,49 @@
+package com.flight.project.dto;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name="Airports")
+public class Airport {
+	@Id
+	@Column(name="airportName")
+	private String airportName;
+	@Column(name="Id")
+	private long Id;
+	@Column(name="airportLocation")
+	private String airportLocation;
+	public Airport(String airportName, long Id, String airportLocation) {
+		super();
+		this.airportName = airportName;
+		this.Id = Id;
+		this.airportLocation = airportLocation;
+	}
+	public Airport() {
+		super();
+	}
+	public String getAirportName() {
+		return airportName;
+	}
+	public void setAirportName(String airportName) {
+		this.airportName = airportName;
+	}
+	public long getId() {
+		return Id;
+	}
+	public void setId(long Id) {
+		this.Id = Id;
+	}
+	public String getAirportLocation() {
+		return airportLocation;
+	}
+	public void setAirportLocation(String airportLocation) {
+		this.airportLocation = airportLocation;
+	}
+	
+
+}
